@@ -1,137 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Sansation", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: black;
+  background: #0b0b0b;
   color: #fff;
 }
-
-/* ESTILIZAÇÃO GERAL */
-
-.logo {
-  width: 150px;
-}
-
-.flex {
-  display: flex;
-}
-
-.contato {
-  padding: 16px 4%;
-  border-radius: 20px;
-  background: none;
-  color: #7d7d7d;
-  transition: 0.2s;
-}
-.contato:hover {
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 0 40px 10px #ffffff1d;
-}
-
-/* HEADER */
 
 header {
-  padding: 4px 4%;
-  box-shadow: 0 0 40px 10px #ffffff1d;
-}
-
-header .flex {
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-header a {
-  color: #7d7d7d;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.2s;
-}
-header a:hover {
-  color: #fff;
-  transform: scale(1.05);
-}
-
-header ul {
-  list-style-type: none;
-}
-header ul li {
-  display: inline-block;
-  padding: 0 40px;
-}
-
-/* TOPO */
-.topo .flex {
-  padding: 40px 4%;
-  align-items: center;
-}
-.txt-sobre {
-  width: 50%;
+  padding: 1.5rem;
   text-align: center;
+  background: #000;
+}
+
+header img {
+  max-width: 160px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+section {
+  padding: 2rem 1.2rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero p {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.sobre {
+  background: #111;
+  border-radius: 12px;
+}
+
+.sobre h2,
+.agenda h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.sobre p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.agenda form {
   display: flex;
   flex-direction: column;
-  padding: 4px 4%;
-  gap: 20px;
+  gap: 0.8rem;
 }
-.topo .txt-sobre h1 {
-  font-size: 40px;
-  font-weight: 900;
-  border-bottom: solid #7d7d7d 2px;
+
+input,
+textarea {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
 }
-.topo .img {
-  width: 50%;
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+button {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  padding: 1.5rem;
   text-align: center;
-}
-.topo .img img {
-  width: 70%;
-  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #aaa;
 }
 
-/* Sobre */
+@media (min-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-.Sobre {
-  margin: 100px 0;
-  text-align: center;
-}
-.Sobre h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-}
-.Sobre h1 span {
-  display: inline-block;
-  width: 32.5%;
-  height: 2px;
-  background-color: #7d7d7d;
-}
-
-.Sobre .flex {
-  padding: 40px 4%;
-  align-items: center;
-}
-.Sobre .flex p {
-  font-size: 25px;
-}
-.Sobre .img{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-.dupla{
-  display: flex;
-  align-items: center;
-}
-.dupla p{
-  padding: 4%;
-}
-.dupla img{
-  border-radius: 10px;
+  header h1 {
+    font-size: 1.8rem;
+  }
 }
