@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,7 +27,7 @@ header h1 {
 }
 
 section {
-  padding: 2rem 1.2rem;
+  padding: 5% 8%;
 }
 
 .hero {
@@ -68,11 +69,17 @@ section {
   line-height: 1.5;
   color: #ddd;
 }
+.agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .agenda form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  width: 50%;
 }
 
 input,
@@ -88,7 +95,7 @@ textarea {
   height: 90px;
 }
 
-button {
+form button {
   padding: 0.8rem;
   border-radius: 6px;
   border: none;
@@ -99,10 +106,77 @@ button {
 }
 
 footer {
-  padding: 1.5rem;
-  text-align: center;
+  padding: 2% 8%;
   font-size: 0.8rem;
   color: #aaa;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer img {
+  width: 250px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.esq {
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dir {
+  padding-right: 2%;
+  display: flex;
+  gap: 100px;
+}
+.dir h2 {
+  color: #ddd;
+  font-size: 20px;
+}
+.dir a,
+.dir i {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 20px;
+}
+.dir a:hover{
+  color: #fff;
+}
+.dir a:hover i{
+  color: #fff;
+}
+.dir .contato,
+.dir .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contato div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer button {
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 3%;
+  outline: #ccc 2px solid;
+  border: none;
+  transition: 0.5s scale;
+  background-color: #000;
+  color: #ddd;
+}
+footer button:hover {
+  scale: 1.1;
+}
+footer .barra {
+  width: 100%;
+  height: 2px;
+
+  background-color: #aaa;
 }
 
 @media (min-width: 768px) {
