@@ -56,8 +56,24 @@ section {
 .sobre {
   background: #111;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
-
+.sobre img {
+  width: 250px;
+}
+.sobre .djs {
+  display: flex;
+}
+.sobre div .dupla {
+  display: flex;
+  gap: 20px;
+}
+.agenda{
+  background-color: #111;
+}
 .sobre h2,
 .agenda h2 {
   margin-bottom: 1rem;
@@ -69,6 +85,12 @@ section {
   line-height: 1.5;
   color: #ddd;
 }
+.sobre .barra {
+  width: 100%;
+  height: 2px;
+  background-color: #aaa;
+}
+
 .agenda {
   display: flex;
   flex-direction: column;
@@ -103,6 +125,86 @@ form button {
   color: #000;
   font-weight: bold;
   cursor: pointer;
+}
+/* SHOWS */
+.shows {
+  border-radius: 14px;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.cards{
+  display: flex;
+  padding: 2%;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.show-card{
+  width: 250px;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.show-image img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.show-content {
+  flex: 1;
+}
+
+.show-date {
+  font-size: 0.75rem;
+  color: #9b9b9b;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.show-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.show-desc {
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.show-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.show-tags span {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: #1e1e1e;
+  color: #b5b5b5;
+  border: 1px solid #2a2a2a;
+}
+
+@media (max-width: 480px) {
+  .show-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .show-image img {
+    width: 100%;
+    height: 160px;
+  }
 }
 
 footer {
@@ -141,10 +243,10 @@ footer .container {
   text-decoration: none;
   font-size: 20px;
 }
-.dir a:hover{
+.dir a:hover {
   color: #fff;
 }
-.dir a:hover i{
+.dir a:hover i {
   color: #fff;
 }
 .dir .contato,
