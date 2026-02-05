@@ -86,7 +86,7 @@ section {
 }
 
 .galeria img {
-  height: 500px;
+  height: 380px;
   border-radius: 8px;
 }
 
@@ -103,6 +103,7 @@ section {
 }
 .sobre .djs {
   display: flex;
+  gap: 20px;
 }
 .sobre div .dupla {
   display: flex;
