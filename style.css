@@ -40,12 +40,16 @@ p {
 header {
   padding: 1.5rem;
   text-align: center;
-  background: #120d2981;
+  background: linear-gradient(225deg, #1a6385, #130e5a, #2d0e3a);
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-around;
   z-index: 999;
+  transition: transform 0.3s ease;
+}
+header.hide {
+  transform: translateY(-100%);
 }
 
 header img {
@@ -351,9 +355,6 @@ footer .barra {
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
   /* MENU MOBILE */
-  header {
-    position: relative;
-  }
   header nav,
   header div {
     display: none;
