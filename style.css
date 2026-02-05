@@ -1,9 +1,19 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+:root {
+  --main: #8b5cf6;
+  --teste: #22c55e;
+}
+/* ESTILIZAÇÃO GERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  font-family: "Google Sans", sans-serif;
 }
 
 body {
@@ -11,19 +21,51 @@ body {
   color: #fff;
 }
 
+h2 {
+  color: var(--main);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Exo 2", sans-serif;
+}
+h3 {
+  color: #6348ff;
+  font-size: 1.5rem;
+}
+p {
+  color: #eee;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/* RESTO */
 header {
   padding: 1.5rem;
   text-align: center;
-  background: #000;
+  background: #120d2981;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 header img {
   max-width: 160px;
-  margin-bottom: 1rem;
 }
 
-header h1 {
-  font-size: 1.4rem;
+header nav {
+  font-size: 1.1rem;
+}
+header nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+header nav ul a {
+  color: #fff;
+  text-decoration: none;
+}
+header nav ul a:hover {
+  color: var(--main);
 }
 
 section {
@@ -32,12 +74,6 @@ section {
 
 .hero {
   text-align: center;
-}
-
-.hero p {
-  margin-top: 1rem;
-  color: #ccc;
-  font-size: 0.95rem;
 }
 
 .galeria {
@@ -71,20 +107,10 @@ section {
   display: flex;
   gap: 20px;
 }
-.agenda{
+.agenda {
   background-color: #111;
 }
-.sobre h2,
-.agenda h2 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
 
-.sobre p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #ddd;
-}
 .sobre .barra {
   width: 100%;
   height: 2px;
@@ -129,24 +155,23 @@ form button {
 /* SHOWS */
 .shows {
   border-radius: 14px;
-  padding: 1rem;
   align-items: center;
   text-align: center;
 }
-.cards{
+.cards {
   display: flex;
   padding: 2%;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
 }
-.show-card{
-  width: 250px;
+.show-card {
+  width: 300px;
   background-color: #111;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1%;
+  padding: 40px 15px;
   border-radius: 20px;
 }
 
@@ -159,25 +184,19 @@ form button {
 
 .show-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .show-date {
   font-size: 0.75rem;
   color: #9b9b9b;
   display: block;
-  margin-bottom: 0.2rem;
-}
-
-.show-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
 }
 
 .show-desc {
-  font-size: 0.9rem;
-  color: #d0d0d0;
-  line-height: 1.4;
-  margin-bottom: 0.6rem;
+  font-size: 1rem;
 }
 
 .show-tags {
@@ -198,7 +217,6 @@ form button {
 @media (max-width: 480px) {
   .show-card {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .show-image img {
@@ -233,10 +251,6 @@ footer .container {
   display: flex;
   gap: 100px;
 }
-.dir h2 {
-  color: #ddd;
-  font-size: 20px;
-}
 .dir a,
 .dir i {
   color: #aaa;
@@ -244,10 +258,10 @@ footer .container {
   font-size: 20px;
 }
 .dir a:hover {
-  color: #fff;
+  color: var(--main);
 }
 .dir a:hover i {
-  color: #fff;
+  color: var(--main);
 }
 .dir .contato,
 .dir .nav {
@@ -272,21 +286,164 @@ footer button {
   color: #ddd;
 }
 footer button:hover {
+  color: var(--main);
+  outline: var(--main) 2px solid;
+
   scale: 1.1;
 }
 footer .barra {
   width: 100%;
   height: 2px;
-
   background-color: #aaa;
 }
 
-@media (min-width: 768px) {
-  .galeria {
-    grid-template-columns: repeat(4, 1fr);
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 12px;
+  animation: zoom 0.3s ease;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover na galeria */
+.galeria img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  /* MENU MOBILE */
+  header {
+    position: relative;
+  }
+  header nav,
+  header div {
+    display: none;
   }
 
-  header h1 {
-    font-size: 1.8rem;
+  .sobre {
+    padding: 8% 5%;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .sobre .djs {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .sobre .dupla {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre .dupla img {
+    width: 200px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  footer {
+    padding: 10% 6%;
+    text-align: center;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  footer img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .esq {
+    padding: 0;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .esq p {
+    font-size: 0.95rem;
+  }
+
+  .dir {
+    padding: 0;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .dir .nav,
+  .dir .contato {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contato div {
+    align-items: center;
+  }
+
+  footer button {
+    padding: 10px;
+  }
+
+  footer .barra {
+    margin-top: 20px;
+  }
+
+  footer > p {
+    font-size: 0.75rem;
+    text-align: center;
   }
 }

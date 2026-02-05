@@ -15,11 +15,19 @@
   <body>
     <header>
       <img src="./imgs/Logo2.png" alt="RACA Eventos" />
-      <h1>Dupla de DJs para seu evento</h1>
+      <div></div>
+      <nav>
+        <ul>
+          <a href="#hero">Galeria</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#shows">Shows</a>
+          <a href="#agenda">Agende</a>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero" id="hero">
-      <h2>Energia, experiência e pista cheia</h2>
+      <h2>ENERGIA, EXPERIÊNCIAS E VIBRAÇÕES</h2>
       <p>Casamentos, festas, eventos corporativos e muito mais</p>
 
       <div class="galeria">
@@ -31,7 +39,7 @@
     </section>
 
     <section class="sobre" id="sobre">
-      <h2>Sobre a dupla</h2>
+      <h2>SOBRE A DUPLA</h2>
       <p>
         Somos uma dupla de DJs especializada em criar experiências únicas.
         Trabalhamos com equipamentos profissionais, repertório personalizado e
@@ -40,33 +48,35 @@
       <div class="barra"></div>
       <div class="djs">
         <div style="margin-top: 1.5rem">
-          <h3 style="margin-bottom: 0.5rem">CLEOMAR</h3>
+          <h3 style="margin-bottom: 0.5rem">DJ CLEO</h3>
           <div class="dupla">
             <img src="imgs/cleo2.jpg" alt="" />
             <p>
-              Especialista em abrir e conduzir a pista, com sets que passam pelo
-              eletrônico, house e hits atuais. Focado em criar clima e manter a
-              energia do público do início ao fim.
+              Especialista em criar a base perfeita da pista, DJ Cleo conduz o
+              público com sensibilidade e energia. Seus sets transitam entre
+              eletrônico, house e hits atuais, sempre construindo o clima certo
+              para que cada momento do evento flua naturalmente.
             </p>
           </div>
         </div>
 
         <div style="margin-top: 1.2rem">
-          <h3 style="margin-bottom: 0.5rem">RAUL</h3>
+          <h3 style="margin-bottom: 0.5rem">DJ RUZAO</h3>
           <div class="dupla">
             <img src="imgs/raul2.jpg" alt="" />
             <p>
-              Responsável pelos momentos de pico da festa, com mixes precisos,
-              transições rápidas e repertório versátil. Sempre atento à resposta
-              da pista para entregar o melhor drop.
+              DJ Ruzao assume os momentos de maior intensidade da festa. Com
+              mixes precisos, transições rápidas e leitura afiada da pista,
+              entrega drops certeiros e mantém a energia no auge quando o
+              público pede mais.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="shows">
-      <h2>Shows realizados</h2>
+    <section class="shows" id="shows">
+      <h2>SHOWS REALIZADOS</h2>
 
       <div class="cards">
         <div class="show-card">
@@ -117,7 +127,7 @@
     </section>
 
     <section class="agenda" id="agenda">
-      <h2>Agende seu evento</h2>
+      <h2>AGENDE SEU EVENTO</h2>
       <form>
         <input type="text" placeholder="Seu nome" required />
         <input type="tel" placeholder="WhatsApp" required />
@@ -140,13 +150,14 @@
         </div>
         <div class="dir">
           <div class="nav">
-            <h2>Navegação</h2>
+            <h2>NAVEGAÇÃO</h2>
             <a href="#hero">Galeria</a>
             <a href="#sobre">Sobre</a>
+            <a href="#shows">Shows</a>
             <a href="#agenda">Agende</a>
           </div>
           <div class="contato">
-            <h2>Contato</h2>
+            <h2>CONTATO</h2>
             <div class="contato-cleo">
               <a href="https://www.instagram.com/djcleoosilva/">
                 <i class="bi bi-instagram"></i>
@@ -177,6 +188,10 @@
       <div class="barra"></div>
       <p>© Copyright 2026. Desenvolvido por Kauan Rossi</p>
     </footer>
+    <div class="lightbox" id="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" />
+    </div>
 
     <script src="script.js"></script>
   </body>
