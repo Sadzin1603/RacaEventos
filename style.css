@@ -45,6 +45,7 @@ header {
   top: 0;
   display: flex;
   justify-content: space-around;
+  z-index: 999;
 }
 
 header img {
@@ -78,14 +79,14 @@ section {
 
 .galeria {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem;
   margin-top: 1.5rem;
   align-items: center;
 }
 
 .galeria img {
-  width: 100%;
+  height: 500px;
   border-radius: 8px;
 }
 
@@ -356,7 +357,13 @@ footer .barra {
   header div {
     display: none;
   }
-
+  .galeria {
+    grid-template-columns: 2fr 2fr;
+  }
+  .galeria img {
+    height: inherit;
+    width: 100%;
+  }
   .sobre {
     padding: 8% 5%;
   }
