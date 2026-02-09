@@ -7,6 +7,17 @@
   --teste: #22c55e;
 }
 /* ESTILIZAÇÃO GERAL */
+#whatsapp{
+  color: var(--teste);
+  font-size: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #6348ff;
+  padding: .6rem .8rem;
+  border-radius: 50%;
+  border: solid 1px var(--main);
+}
 * {
   margin: 0;
   padding: 0;
@@ -86,14 +97,20 @@ section {
 .galeria {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.8rem;
-  margin-top: 1.5rem;
-  align-items: center;
+  gap: 24px;
+  margin-top: 2rem;
 }
 
 .galeria img {
-  height: 380px;
-  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 3 / 4;      /* CONTROLA vertical */
+  object-fit: cover;
+  border-radius: 18px;
+  background: #111;
+}
+
+.galeria img.wide {
+  grid-column: span 2;
 }
 
 .sobre {
@@ -104,19 +121,36 @@ section {
   gap: 20px;
   align-items: center;
 }
-.sobre img {
-  width: 250px;
-}
 .sobre .djs {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.dj-card {
+  background: #0e0e0e;
+  border-radius: 20px;
+  padding: 30px 25px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 20px;
 }
-.sobre div .dupla {
-  display: flex;
-  gap: 20px;
+
+.dj-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--main);
 }
-.agenda {
-  background-color: #111;
+
+.dj-card p {
+  font-size: 1rem;
+  color: #ddd;
 }
 
 .sobre .barra {
@@ -124,6 +158,10 @@ section {
   height: 2px;
   background-color: #aaa;
 }
+.agenda {
+  background-color: #111;
+}
+
 
 .agenda {
   display: flex;
