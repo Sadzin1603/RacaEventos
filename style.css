@@ -7,14 +7,14 @@
   --teste: #22c55e;
 }
 /* ESTILIZAÇÃO GERAL */
-#whatsapp{
+#whatsapp {
   color: var(--teste);
   font-size: 30px;
   position: fixed;
   bottom: 50px;
   right: 50px;
   background-color: #6348ff;
-  padding: .6rem .8rem;
+  padding: 0.7rem 0.8rem;
   border-radius: 50%;
   border: solid 1px var(--main);
 }
@@ -103,7 +103,7 @@ section {
 
 .galeria img {
   width: 100%;
-  aspect-ratio: 3 / 4;      /* CONTROLA vertical */
+  aspect-ratio: 3 / 4; /* CONTROLA vertical */
   object-fit: cover;
   border-radius: 18px;
   background: #111;
@@ -123,7 +123,7 @@ section {
 }
 .sobre .djs {
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 40px;
   width: 100%;
   max-width: 1000px;
@@ -161,7 +161,6 @@ section {
 .agenda {
   background-color: #111;
 }
-
 
 .agenda {
   display: flex;
@@ -323,12 +322,13 @@ footer .container {
 footer button {
   border-radius: 50%;
   font-size: 20px;
-  padding: 3%;
+  padding: 0.9rem 1rem;
   outline: #ccc 2px solid;
   border: none;
   transition: 0.5s scale;
   background-color: #000;
   color: #ddd;
+  cursor: pointer;
 }
 footer button:hover {
   color: var(--main);
