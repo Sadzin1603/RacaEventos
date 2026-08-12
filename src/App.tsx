@@ -1,14 +1,5 @@
 import { useState, useEffect } from 'react'
 
-import logoPng from '@/imports/Logo.png'
-import racaPng from '@/imports/Logo.png'
-import raul2 from '@/imports/raul2.jpg'
-import cleo2 from '@/imports/cleo2.jpg'
-import dupla2 from '@/imports/dupla2.jpg'
-import dupla3 from '@/imports/dupla3.jpg'
-import dupla4 from '@/imports/dupla4.png'
-import fotoDupla from '@/imports/foto_dupla.jpg'
-
 const GOLD = '#c9a84c'
 const GOLD_DIM = 'rgba(201,168,76,0.10)'
 const GOLD_BORDER = 'rgba(201,168,76,0.20)'
@@ -79,7 +70,7 @@ export default function App() {
       }}>
         <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
           <img
-            src={logoPng}
+            src="/images/Logo.png"
             alt="RACA Eventos"
             style={{ height: scrolled ? '36px' : '44px', width: 'auto', transition: 'height 0.4s ease', filter: 'brightness(0) invert(1)' }}
           />
@@ -121,7 +112,7 @@ export default function App() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 99, background: '#080808', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '40px' }}>
-          <img src={logoPng} alt="RACA Eventos" style={{ height: '52px', filter: 'brightness(0) invert(1)', marginBottom: '16px' }} />
+          <img src="/images/Logo.png" alt="RACA Eventos" style={{ height: '52px', filter: 'brightness(0) invert(1)', marginBottom: '16px' }} />
           {NAV_LINKS.map(l => (
             <a key={l.label} href={l.href} onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none', color: '#f0ece4', fontSize: '28px', fontFamily: "'Fraunces', serif", letterSpacing: '0.05em' }}>{l.label}</a>
           ))}
@@ -133,7 +124,7 @@ export default function App() {
       <section style={{ position: 'relative', height: '100vh', minHeight: '640px', overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}>
         {/* Hero image — dupla4.png: ambos apontando, muita energia */}
         <img
-          src={dupla4}
+          src="/images/dupla4.png"
           alt="DJ Cleo e DJ Ruzão no palco"
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%',
@@ -147,7 +138,7 @@ export default function App() {
 
         {/* RACA watermark — large, low opacity */}
         <img
-          src={racaPng}
+          src="/images/Logo.png"
           alt=""
           aria-hidden
           style={{
@@ -212,7 +203,7 @@ export default function App() {
             {/* dupla2 — palco oficial com banner RACA */}
             <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '4/3', background: '#111' }}>
               <img
-                src={dupla2}
+                src="/images/dupla2.jpg"
                 alt="DJ Cleo e DJ Ruzão no palco com banner RACA Eventos"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', filter: 'contrast(1.1) brightness(0.82) saturate(1.3)', display: 'block', transition: 'transform 0.7s ease' }}
                 onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
@@ -257,7 +248,7 @@ export default function App() {
             {/* DJ Cleo */}
             <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '3/4', background: '#111' }}>
               <img
-                src={cleo2}
+                src="/images/cleo2.jpg"
                 alt="DJ Cleo no controle"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', filter: 'contrast(1.18) brightness(0.75) saturate(1.3)', display: 'block', transition: 'transform 0.7s ease' }}
                 onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.04)')}
@@ -286,7 +277,7 @@ export default function App() {
             {/* DJ Ruzão */}
             <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '3/4', background: '#111' }}>
               <img
-                src={raul2}
+                src="/images/raul2.jpg"
                 alt="DJ Ruzão no controle"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 10%', filter: 'contrast(1.18) brightness(0.75) saturate(1.3)', display: 'block', transition: 'transform 0.7s ease' }}
                 onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.04)')}
@@ -315,7 +306,7 @@ export default function App() {
           {/* foto_dupla — retrato mais caloroso, largura total */}
           <div style={{ position: 'relative', overflow: 'hidden', height: '340px', background: '#111' }}>
             <img
-              src={fotoDupla}
+              src="/images/foto_dupla.jpg"
               alt="DJ Cleo e DJ Ruzão juntos"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', filter: 'contrast(1.1) brightness(0.72) saturate(1.3)', display: 'block', transition: 'transform 0.7s ease' }}
               onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
@@ -377,7 +368,7 @@ export default function App() {
         {/* dupla3 — performance noturna com luzes azuis */}
         <div style={{ position: 'relative', height: '560px' }}>
           <img
-            src={dupla3}
+            src="/images/dupla3.jpg"
             alt="DJ Ruzão em performance noturna com luzes azuis"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', filter: 'contrast(1.2) brightness(0.6) saturate(1)', display: 'block' }}
           />
@@ -494,7 +485,7 @@ export default function App() {
 
       {/* ── FOOTER ── */}
       <footer style={{ borderTop: `1px solid ${GOLD_BORDER}`, padding: '40px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-        <img src={logoPng} alt="RACA Eventos" style={{ height: '32px', filter: 'brightness(0) invert(1)', opacity: 0.6 }} />
+        <img src="/images/Logo.png" alt="RACA Eventos" style={{ height: '32px', filter: 'brightness(0) invert(1)', opacity: 0.6 }} />
         <div style={{ fontSize: '11px', color: 'rgba(240,236,228,0.2)', letterSpacing: '0.08em' }}>
           © 2025 Raça Eventos — São Paulo
         </div>
