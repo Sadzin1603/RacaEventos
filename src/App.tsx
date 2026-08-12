@@ -70,7 +70,7 @@ export default function App() {
       }}>
         <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
           <img
-            src="/images/Logo.png"
+            src="./images/Logo.png"
             alt="RACA Eventos"
             style={{ height: scrolled ? '36px' : '44px', width: 'auto', transition: 'height 0.4s ease', filter: 'brightness(0) invert(1)' }}
           />
