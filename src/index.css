@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: #080808;
+  --color-foreground: #f0ece4;
+  --color-card: #111111;
+  --color-card-foreground: #f0ece4;
+  --color-primary: #c9a84c;
+  --color-primary-foreground: #080808;
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #a09880;
+  --color-muted: #1f1f1f;
+  --color-muted-foreground: #6b6458;
+  --color-accent: #c9a84c;
+  --color-accent-foreground: #080808;
+  --color-border: rgba(201, 168, 76, 0.18);
+  --color-ring: #c9a84c;
+  --radius: 2px;
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080808;
+  color: #f0ece4;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: #f0ece4;
+}
